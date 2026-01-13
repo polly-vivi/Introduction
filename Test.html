@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CISC3003 Practice</title>
+<style>
+/* 重置默认样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+/* 全屏渐变背景 */
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	min-height: 100vh;
+	background: radial-gradient(circle, 
+		#E0FFFF, 
+		#98FB98, 
+		#FFC0CB, 
+		#FFEFD5);  
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
+            color: white;
+}
+
+/* 背景动画 */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+.container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+
+ /* 单独设置特定元素居中 */
+.center-text {
+            text-align: center;
+        }
+        
+/* 方法6：发光描边 */
+        .stroke-glow {
+            color: #00ff00;
+            text-shadow: 
+                0 0 10px #000,
+                0 0 20px #0f0,
+                0 0 30px #0ff,
+                0 0 40px #0ff;
+        }
+
+</style>
+</head>
+<body>
+<div class = "stroke-glow">
+	<h1 style = "color: Lime; font-size: 100px;" class = "center-text">Amy is Gay or shit</h1>
+	</div>
+</body>
+</html>
