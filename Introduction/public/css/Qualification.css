@@ -137,134 +137,198 @@ section {
 }
 
 /* Education Section */
+
 .education-timeline {
-    max-width: 80rem;
+    max-width: 90rem;
     margin: 0 auto;
+    padding: 2rem 0;
 }
 
-.education-item {
+/* ---- Each Education Item ---- */
+.edu-item {
     display: flex;
     gap: 3rem;
     margin-bottom: 4rem;
-    padding: 2rem;
-    background: var(--snd-bg-color);
-    border-radius: 2rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    border: 0.3rem solid transparent;
-    transition: 0.5s ease;
-}
-
-.education-item:hover {
-    border-color: var(--main-color);
-    transform: scale(1.02);
-}
-
-.education-period {
-    min-width: 15rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--main-color);
-}
-
-.education-content {
-    flex: 1;
-}
-
-.education-content h3 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.education-degree {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--main-color);
-    margin-bottom: 0.5rem;
-}
-
-.education-details {
-    margin: 1.5rem 0;
-}
-
-.education-details p {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.education-highlights h4 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: var(--main-color);
-}
-
-.education-highlights ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.education-highlights ul li {
-    font-size: 1.5rem;
-    margin-bottom: 0.8rem;
-    padding-left: 2rem;
     position: relative;
 }
 
-.education-highlights ul li::before {
-    content: '•';
-    color: var(--main-color);
+/* ---- Left Side: Marker (Dot + Line) ---- */
+.edu-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    padding-top: 0.5rem;
+}
+
+.edu-dot {
+    width: 5rem;
+    height: 5rem;
+    background: var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-color);
     font-size: 2rem;
-    position: absolute;
-    left: 0;
-    top: -0.3rem;
+    box-shadow: 0 0 0 0.4rem var(--bg-color), 0 0 0 0.6rem var(--main-color);
+    z-index: 2;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
-.certifications {
-    margin-top: 4rem;
+.edu-item:hover .edu-dot {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 0.4rem var(--bg-color), 0 0 0 0.8rem var(--main-color), 0 0 2.5rem rgba(18, 204, 237, 0.4);
 }
 
-.certifications h3 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
+.edu-line {
+    width: 0.25rem;
+    flex: 1;
+    min-height: 3rem;
+    background: linear-gradient(to bottom, var(--main-color), rgba(18, 204, 237, 0.3));
+    margin: 0.5rem 0;
+    border-radius: 0.2rem;
 }
 
-.certification-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 2rem;
+.edu-line-last {
+    background: linear-gradient(to bottom, var(--main-color), transparent);
+    min-height: 2rem;
 }
 
-.certification-card {
+/* ---- Right Side: Card ---- */
+.edu-card {
+    flex: 1;
     background: var(--snd-bg-color);
-    padding: 2rem;
+    padding: 2.5rem 3rem;
     border-radius: 2rem;
-    text-align: center;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    border: 0.3rem solid transparent;
-    transition: 0.5s ease;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+    border: 0.2rem solid transparent;
+    transition: all 0.4s ease;
 }
 
-.certification-card:hover {
+.edu-card:hover {
     border-color: var(--main-color);
-    transform: scale(1.02);
+    transform: translateX(0.5rem);
+    box-shadow: 0 1rem 3rem rgba(18, 204, 237, 0.15);
 }
 
-.certification-card h4 {
+/* ---- Period / Date ---- */
+.edu-period {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--main-color);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.edu-period .badge {
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: var(--main-color);
+    color: var(--bg-color);
+    padding: 0.2rem 1.2rem;
+    border-radius: 3rem;
+    letter-spacing: 0.05rem;
+}
+
+/* ---- Institution Name ---- */
+.edu-institution {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+/* ---- Degree ---- */
+.edu-degree {
     font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.2rem;
+}
+
+/* ---- Track / Specialization ---- */
+.edu-track {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+/* ---- Details Grid (Faculty, Department, etc.) ---- */
+.edu-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 1rem 2rem;
+    margin: 1.5rem 0 2rem;
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border-radius: 1.2rem;
+}
+
+.edu-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.edu-detail-item i {
+    width: 2.4rem;
+    color: var(--main-color);
+    font-size: 1.6rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.edu-detail-item strong {
+    font-weight: 600;
+}
+
+/* ---- Coursework Tags ---- */
+.edu-coursework {
+    margin-top: 1.5rem;
+}
+
+.edu-coursework h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-color);
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.edu-coursework h4 i {
     color: var(--main-color);
 }
 
-.cert-level {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+.course-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
 }
 
-.cert-issuer,
-.cert-date {
-    font-size: 1.4rem;
-    color: #666;
+.course-tag {
+    padding: 0.4rem 1.4rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-weight: 500;
+    border-radius: 3rem;
+    border: 0.15rem solid var(--main-color);
+    transition: all 0.3s ease;
+}
+
+.course-tag:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transform: scale(1.05);
 }
 
 /* Work Experience Section */
