@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products | RedStore</title>
-    <link rel="stylesheet" href="css/cisc3003-IndAssgn-demo02.css">
+    <title>Product Details | RedStore</title>
+    <link rel="stylesheet" href="css/Product-02.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -28,92 +28,92 @@
         </div>
     </div>
 
-    <div class="small-container">
-        <div class="row row-2" style="justify-content: space-between; margin: 100px auto 50px;">
-            <h2>All Products</h2>
-            <select style="border:1px solid #ff523b; padding:5px;">
-                <option>Default Sorting</option>
-                <option>Sort by price</option>
-                <option>Sort by popularity</option>
-                <option>Sort by rating</option>
-            </select>
-        </div>
-        
+    <!-- Single Product Details -->
+    <div class="small-container single-product">
         <div class="row">
-            <div class="col-4" onclick="window.location.href='productDetails.html';">
-                <img src="images/RedStore_Img/product-1.jpg" alt="Product 1">
-                <h3>Red Printed T-Shirt</h3>
+            <div class="col-2">
+                <img src="images/RedStore_Img/product-1.jpg" id="ProductImg" alt="Product Image" style="width:100%">
+                
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="images/RedStore_Img/gallery-1.jpg" class="small-img" alt="Gallery 1">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/RedStore_Img/gallery-2.jpg" class="small-img" alt="Gallery 2">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/RedStore_Img/gallery-3.jpg" class="small-img" alt="Gallery 3">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/RedStore_Img/gallery-4.jpg" class="small-img" alt="Gallery 4">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2">
+                <p>Home / T-Shirt</p>
+                <h1>Red Printed T-Shirt by HRX</h1>
+                <h2>$50.00</h2>
+                <select>
+                    <option>Select Size</option>
+                    <option>XXL</option>
+                    <option>XL</option>
+                    <option>L</option>
+                    <option>M</option>
+                    <option>S</option>
+                </select>
+                <input type="number" value="1">
+                <a href="#" class="btn">Add To Cart</a>
+                <h3>Product Details <i class="fa fa-indent"></i></h3>
+                <br>
+                <p>Give your summer wardrobe a style upgrade with the HRX Men's Active T-Shirt. Team it with a pair of shorts for your morning workout or a denims for an evening out with the guys.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Title -->
+    <div class="small-container">
+        <div class="row row-2" style="justify-content: space-between; margin: 50px auto 20px;">
+            <h2>Related Products</h2>
+            <p>View More</p>
+        </div>
+    </div>
+
+    <!-- Related Products -->
+    <div class="small-container">
+        <div class="row">
+             <div class="col-4" onclick="window.location.href='productDetails.html';">
+                <img src="images/RedStore_Img/product-5.jpg" alt="Related Product 1">
+                <h3>Roadster Shirt</h3>
                 <div class="rating">
                     <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
                 </div>
                 <p>$50.00</p>
             </div>
-            <div class="col-4" onclick="window.location.href='productDetails.html';">
-                <img src="images/RedStore_Img/product-2.jpg" alt="Product 2">
-                <h3>Black Shoes</h3>
+             <div class="col-4" onclick="window.location.href='productDetails.html';">
+                <img src="images/RedStore_Img/product-6.jpg" alt="Related Product 2">
+                <h3>Red Shoes</h3>
                 <div class="rating">
                     <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
                 </div>
                 <p>$50.00</p>
             </div>
-            <div class="col-4" onclick="window.location.href='productDetails.html';">
-                <img src="images/RedStore_Img/product-3.jpg" alt="Product 3">
+             <div class="col-4" onclick="window.location.href='productDetails.html';">
+                <img src="images/RedStore_Img/product-7.jpg" alt="Related Product 3">
                 <h3>Grey Pants</h3>
                 <div class="rating">
                     <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
                 </div>
                 <p>$50.00</p>
             </div>
-            <div class="col-4" onclick="window.location.href='productDetails.html';">
-                <img src="images/RedStore_Img/product-4.jpg" alt="Product 4">
+             <div class="col-4" onclick="window.location.href='productDetails.html';">
+                <img src="images/RedStore_Img/product-8.jpg" alt="Related Product 4">
                 <h3>Blue Polo</h3>
                 <div class="rating">
                     <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
                 </div>
                 <p>$50.00</p>
             </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-4" onclick="window.location.href='productDetails.html';">
-                <img src="images/RedStore_Img/product-5.jpg" alt="Product 5">
-                <h3>Running Shoes</h3>
-                <div class="rating">
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-                </div>
-                <p>$50.00</p>
-            </div>
-             <div class="col-4" onclick="window.location.href='productDetails.html';">
-                <img src="images/RedStore_Img/product-6.jpg" alt="Product 6">
-                <h3>Black Tee</h3>
-                <div class="rating">
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-                </div>
-                <p>$50.00</p>
-            </div>
-             <div class="col-4" onclick="window.location.href='productDetails.html';">
-                <img src="images/RedStore_Img/product-7.jpg" alt="Product 7">
-                <h3>Socks</h3>
-                <div class="rating">
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-                </div>
-                <p>$50.00</p>
-            </div>
-             <div class="col-4" onclick="window.location.href='productDetails.html';">
-                <img src="images/RedStore_Img/product-8.jpg" alt="Product 8">
-                <h3>Watch</h3>
-                <div class="rating">
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-                </div>
-                <p>$50.00</p>
-            </div>
-        </div>
-        
-        <div class="page-btn" style="margin: 0 auto 80px; text-align:center;">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>&#8594;</span>
         </div>
     </div>
 
@@ -142,11 +142,12 @@
                 </div>
             </div>
             <hr>
-            <p class="copyright">CISC3003 Web Programming - 2025: DC226572 Wong Pou I</p>
+            <p class="copyright">CISC3003 Web Programming - 2026: DC226572 Wong Pou I</p>
         </div>
     </div>
 
     <script>
+        // Menu Toggle
         var MenuItems = document.getElementById("MenuItems");
         MenuItems.style.maxHeight = "0px";
         function menutoggle(){
@@ -155,6 +156,22 @@
             } else {
                 MenuItems.style.maxHeight = "0px";
             }
+        }
+
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick = function(){
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function(){
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function(){
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function(){
+            ProductImg.src = SmallImg[3].src;
         }
     </script>
 </body>
