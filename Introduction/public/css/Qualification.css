@@ -607,174 +607,6 @@ section {
     }
 }
 
-.section-divider {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 0 3rem;
-    gap: 2rem;
-    position: relative;
-}
-
-/* ---- Glow Background ---- */
-.section-divider::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30rem;
-    height: 6rem;
-    background: radial-gradient(ellipse, rgba(18, 204, 237, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-}
-
-.section-divider:hover::before {
-    opacity: 1;
-}
-
-/* ---- Lines ---- */
-.section-divider .line {
-    flex: 1;
-    max-width: 12rem;
-    height: 0.15rem;
-    background: linear-gradient(to right, transparent, var(--bg-color), transparent);
-    border-radius: 0.1rem;
-    position: relative;
-    transition: all 0.5s ease;
-}
-
-/* Line Glow on Hover */
-.section-divider:hover .line {
-    height: 0.2rem;
-    background: linear-gradient(to right, transparent, var(--main-color), transparent);
-    box-shadow: 0 0 1.2rem rgba(18, 204, 237, 0.3);
-}
-
-.section-divider:hover .line:first-of-type {
-    background: linear-gradient(to right, transparent, var(--main-color), rgba(18, 204, 237, 0.2));
-}
-
-.section-divider:hover .line:last-of-type {
-    background: linear-gradient(to left, transparent, var(--main-color), rgba(18, 204, 237, 0.2));
-}
-
-/* ---- Icon Wrapper ---- */
-.section-divider .icon-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
-    position: relative;
-    padding: 0 1.5rem;
-}
-
-/* Icon Wrapper Glow Ring */
-.section-divider .icon-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 8rem;
-    height: 8rem;
-    background: radial-gradient(circle, rgba(18, 204, 237, 0.12) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.section-divider:hover .icon-wrapper::before {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.2);
-}
-
-/* ---- Icons ---- */
-.section-divider .icon-wrapper i {
-    font-size: 1.8rem;
-    color: var(--bg-color);
-    opacity: 0.4;
-    transition: all 0.4s ease;
-    position: relative;
-    z-index: 1;
-}
-
-.section-divider:hover .icon-wrapper i {
-    opacity: 0.9;
-    transform: scale(1.15);
-    color: var(--main-color);
-    text-shadow: 0 0 2rem rgba(18, 204, 237, 0.6);
-}
-
-/* ---- Diamonds ---- */
-.section-divider .icon-wrapper .diamond {
-    width: 0.8rem;
-    height: 0.8rem;
-    background: var(--bg-color);
-    transform: rotate(45deg);
-    opacity: 0.35;
-    border-radius: 0.1rem;
-    transition: all 0.5s ease;
-    position: relative;
-    z-index: 1;
-}
-
-.section-divider:hover .icon-wrapper .diamond {
-    opacity: 0.9;
-    background: var(--main-color);
-    box-shadow: 0 0 1.5rem rgba(18, 204, 237, 0.5);
-}
-
-.section-divider .icon-wrapper .diamond-center {
-    width: 1.2rem;
-    height: 1.2rem;
-    background: var(--bg-color);
-    transform: rotate(45deg);
-    opacity: 0.55;
-    border-radius: 0.1rem;
-    transition: all 0.5s ease;
-    position: relative;
-    z-index: 1;
-}
-
-.section-divider:hover .icon-wrapper .diamond-center {
-    opacity: 1;
-    background: var(--main-color);
-    box-shadow: 0 0 2.5rem rgba(18, 204, 237, 0.6);
-}
-
-/* ---- Chevron Icons ---- */
-.section-divider .icon-wrapper i.fa-chevron-left,
-.section-divider .icon-wrapper i.fa-chevron-right {
-    font-size: 1.4rem;
-    opacity: 0.3;
-}
-
-.section-divider:hover .icon-wrapper i.fa-chevron-left,
-.section-divider:hover .icon-wrapper i.fa-chevron-right {
-    opacity: 0.7;
-    color: var(--main-color);
-    text-shadow: 0 0 1.5rem rgba(18, 204, 237, 0.4);
-}
-
-/* ---- Pulsing Animation ---- */
-@keyframes glowPulse {
-    0%, 100% {
-        box-shadow: 0 0 1.5rem rgba(18, 204, 237, 0.2);
-    }
-    50% {
-        box-shadow: 0 0 3rem rgba(18, 204, 237, 0.5);
-    }
-}
-
-.section-divider:hover .icon-wrapper .diamond-center {
-    animation: glowPulse 1.5s ease-in-out infinite;
-}
-
 /* Awards Section */
 .awards-categories {
     display: grid;
@@ -939,6 +771,187 @@ section {
 .btn-secondary:hover {
     background: var(--main-color);
     color: var(--bg-color);
+}
+
+/* Section Divider */
+.section-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0 4rem;
+    gap: 2rem;
+    position: relative;
+}
+
+/* ---- Glow Effect ---- */
+.section-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20rem;
+    height: 6rem;
+    background: radial-gradient(ellipse, rgba(18, 204, 237, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: dividerGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes dividerGlow {
+    0% {
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.15);
+    }
+}
+
+/* ---- Lines ---- */
+.section-divider .line {
+    flex: 1;
+    max-width: 12rem;
+    height: 0.15rem;
+    background: linear-gradient(to right, transparent, var(--bg-color), transparent);
+    border-radius: 0.1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---- Icon Wrapper ---- */
+.section-divider .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.section-divider .icon-wrapper i {
+    font-size: 1.8rem;
+    color: var(--bg-color);
+    opacity: 0.5;
+    transition: all 0.4s ease;
+}
+
+.section-divider .icon-wrapper .diamond {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: var(--bg-color);
+    transform: rotate(45deg);
+    opacity: 0.4;
+    border-radius: 0.1rem;
+    transition: all 0.4s ease;
+}
+
+.section-divider .icon-wrapper .diamond-center {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: var(--bg-color);
+    transform: rotate(45deg);
+    opacity: 0.6;
+    border-radius: 0.1rem;
+    transition: all 0.4s ease;
+}
+
+.section-divider .icon-wrapper i.fa-chevron-right {
+    font-size: 1.4rem;
+    opacity: 0.35;
+}
+
+/* ---- Hover Effects ---- */
+.section-divider:hover .icon-wrapper i {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.section-divider:hover .diamond,
+.section-divider:hover .diamond-center {
+    opacity: 0.8;
+}
+
+.section-divider:hover .line {
+    background: linear-gradient(to right, transparent, var(--bg-color), transparent);
+    height: 0.2rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+    .section-divider {
+        padding: 3.5rem 0 3rem;
+    }
+
+    .section-divider::before {
+        width: 14rem;
+        height: 4rem;
+    }
+
+    .section-divider .line {
+        max-width: 6rem;
+    }
+
+    .section-divider .icon-wrapper {
+        gap: 0.8rem;
+    }
+
+    .section-divider .icon-wrapper i {
+        font-size: 1.4rem;
+    }
+
+    .section-divider .icon-wrapper .diamond {
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+
+    .section-divider .icon-wrapper .diamond-center {
+        width: 0.9rem;
+        height: 0.9rem;
+    }
+
+    .section-divider .icon-wrapper i.fa-chevron-right {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-divider {
+        padding: 2.5rem 0 2rem;
+        gap: 1.2rem;
+    }
+
+    .section-divider::before {
+        width: 10rem;
+        height: 3rem;
+    }
+
+    .section-divider .line {
+        max-width: 4rem;
+    }
+
+    .section-divider .icon-wrapper {
+        gap: 0.6rem;
+    }
+
+    .section-divider .icon-wrapper i {
+        font-size: 1.2rem;
+    }
+
+    .section-divider .icon-wrapper .diamond {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .section-divider .icon-wrapper .diamond-center {
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+
+    .section-divider .icon-wrapper i.fa-chevron-right {
+        font-size: 1rem;
+    }
 }
 
 /* Footer */
