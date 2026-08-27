@@ -334,7 +334,6 @@ section {
 /* Work Experience Section */
 .experience-section {
     background: var(--snd-bg-color);
-    margin-bottom: 5rem;
 }
 
 .experience-timeline {
