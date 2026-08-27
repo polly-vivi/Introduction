@@ -248,6 +248,7 @@ section {
     margin-bottom: 3rem;
     text-align: center;
     color: var(--text-color);
+    position: relative;
 }
 
 .weekly-logs h3::after {
@@ -323,6 +324,76 @@ section {
     position: absolute;
     left: 0;
     font-weight: 700;
+}
+
+/* ===== Section Divider ===== */
+.section-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 3rem;
+    gap: 2rem;
+}
+
+.section-divider .line {
+    flex: 1;
+    max-width: 12rem;
+    height: 0.15rem;
+    background: linear-gradient(to right, transparent, var(--main-color), transparent);
+    border-radius: 0.1rem;
+}
+
+.section-divider .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.section-divider .icon-wrapper i {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    opacity: 0.5;
+    transition: all 0.4s ease;
+}
+
+.section-divider .icon-wrapper .diamond {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: var(--main-color);
+    transform: rotate(45deg);
+    opacity: 0.4;
+    border-radius: 0.1rem;
+}
+
+.section-divider .icon-wrapper .diamond-center {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: var(--main-color);
+    transform: rotate(45deg);
+    opacity: 0.6;
+    border-radius: 0.1rem;
+}
+
+.section-divider .icon-wrapper i.fa-chevron-right {
+    font-size: 1.4rem;
+    opacity: 0.35;
+}
+
+/* Hover effect - 可選 */
+.section-divider:hover .icon-wrapper i {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.section-divider:hover .diamond,
+.section-divider:hover .diamond-center {
+    opacity: 0.8;
+}
+
+.section-divider:hover .line {
+    background: linear-gradient(to right, transparent, var(--main-color), transparent);
+    height: 0.2rem;
 }
 
 /* Achievements Section */
