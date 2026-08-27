@@ -527,10 +527,7 @@ section {
     transform: scale(1.05);
 }
 
-/* ============================================================
-   RESPONSIVE - WORK EXPERIENCE
-   ============================================================ */
-
+/* Responsive Design – Work Experience */
 @media (max-width: 768px) {
     .exp-item {
         flex-direction: column;
