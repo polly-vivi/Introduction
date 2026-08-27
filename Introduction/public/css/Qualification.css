@@ -608,6 +608,76 @@ section {
     }
 }
 
+/* Section Divider */
+.section-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 3rem;
+    gap: 2rem;
+}
+
+.section-divider .line {
+    flex: 1;
+    max-width: 12rem;
+    height: 0.15rem;
+    background: linear-gradient(to right, transparent, var(--snd-bg-color), transparent);
+    border-radius: 0.1rem;
+}
+
+.section-divider .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.section-divider .icon-wrapper i {
+    font-size: 1.8rem;
+    color: var(--snd-bg-color);
+    opacity: 0.5;
+    transition: all 0.4s ease;
+}
+
+.section-divider .icon-wrapper .diamond {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: var(--snd-bg-color);
+    transform: rotate(45deg);
+    opacity: 0.4;
+    border-radius: 0.1rem;
+}
+
+.section-divider .icon-wrapper .diamond-center {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: var(--snd-bg-color);
+    transform: rotate(45deg);
+    opacity: 0.6;
+    border-radius: 0.1rem;
+}
+
+.section-divider .icon-wrapper i.fa-chevron-right {
+    font-size: 1.4rem;
+    opacity: 0.35;
+}
+
+/* Hover effect */
+.section-divider:hover .icon-wrapper i {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+.section-divider:hover .diamond,
+.section-divider:hover .diamond-center {
+    opacity: 0.8;
+}
+
+.section-divider:hover .line {
+    background: linear-gradient(to right, transparent, var(--snd-bg-color), transparent);
+    height: 0.2rem;
+}
+
 /* Awards Section */
 .awards-categories {
     display: grid;
@@ -671,7 +741,6 @@ section {
 /* Resume Download Section */
 .resume-section {
     background: var(--snd-bg-color);
-    margin-bottom: 5rem;
 }
 
 .resume-intro h3 {
